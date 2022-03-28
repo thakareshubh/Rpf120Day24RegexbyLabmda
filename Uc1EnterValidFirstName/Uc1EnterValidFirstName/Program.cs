@@ -10,11 +10,11 @@ namespace Uc1EnterValidFirstName
             Console.WriteLine("Enter First name to check :");
             Match("Shubham");
         }
-         public  static void Match( string firstName)
+         public  static void Match( string lirstName)
         {
-            if (Regex.Match(firstName, "^[A-Z][a-z]{3,}$").Success)
+            if (Regex.Match(lirstName, "^[A-Z][a-z]{3,}$").Success)
             {
-                Console.WriteLine(" Firt Name is : " + firstName);
+                Console.WriteLine(" Firt Name is : " + lirstName);
             }
             else
             {
