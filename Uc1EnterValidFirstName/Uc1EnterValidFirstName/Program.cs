@@ -6,15 +6,16 @@ namespace Uc1EnterValidFirstName
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Uc1 RegexProblem");
-            Console.WriteLine("Enter First name to check :");
-            Match("Shubham");
+            Console.WriteLine("RegexProblem");
+            Console.WriteLine("Enter Email to check :");
+            string email=Console.ReadLine();
+            Match(email);
         }
-         public  static void Match( string lirstName)
+         public  static void Match( string email)
         {
-            if (Regex.Match(lirstName, "^[A-Z][a-z]{3,}$").Success)
+            if (Regex.Match(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$").Success)
             {
-                Console.WriteLine(" Firt Name is : " + lirstName);
+                Console.WriteLine("Success , Email is : " + email);
             }
             else
             {
