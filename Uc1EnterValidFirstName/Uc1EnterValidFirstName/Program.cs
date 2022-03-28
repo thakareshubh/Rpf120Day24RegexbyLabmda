@@ -7,20 +7,24 @@ namespace Uc1EnterValidFirstName
         static void Main(string[] args)
         {
             Console.WriteLine("RegexProblem");
-            Console.WriteLine("Enter Email to check :");
-            string email=Console.ReadLine();
-            Match(email);
+            Console.WriteLine("Enter Mobile number  to check :");
+            string mobileNumber=Console.ReadLine();
+            Match(mobileNumber);
         }
-         public  static void Match( string email)
+        /// <summary>
+        /// Matches the specified mobile number.
+        /// </summary>
+        /// <param name="mobileNumber">The mobile number.</param>
+        public static void Match( string mobileNumber)
         {
-            if (Regex.Match(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$").Success)
+            if (Regex.Match(mobileNumber, @"^([0-9]{2})\s([0-9]{10})$").Success)
             {
-                Console.WriteLine("Success , Email is : " + email);
+                Console.WriteLine(" Mobile Number is : " + mobileNumber);
             }
             else
             {
                 Console.WriteLine("Failed");
-                throw new Exception();
+                
             }
         }
     }
